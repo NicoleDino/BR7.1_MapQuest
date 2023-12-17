@@ -12,7 +12,7 @@ def convert_distance(distance, to_metric=True):
     else:
         return distance
 
-def calculate_route():
+def calculate_route(event=None):
     orig = entry_start.get()
     dest = entry_dest.get()
     metric_option = check_var.get()
@@ -100,12 +100,14 @@ button_calculate = Button(root, text="Calculate Route", command=calculate_route,
 result_var = StringVar()
 label_result = Label(root, textvariable=result_var, justify=LEFT, bg=bg_color)
 
-label_start.grid(row=0, column=0, pady=5, padx=10)
+label_start.grid(row=0, column=0, pady=5, padx=10, sticky="w")
 entry_start.grid(row=0, column=1, columnspan=2, pady=5, padx=10, sticky="ew")
-label_dest.grid(row=1, column=0, pady=5, padx=10)
+label_dest.grid(row=1, column=0, pady=5, padx=10, sticky="w")
 entry_dest.grid(row=1, column=1, columnspan=2, pady=5, padx=10, sticky="ew")
 check_metric.grid(row=2, column=0, columnspan=3, pady=5, padx=10, sticky="w")
 button_calculate.grid(row=3, column=0, columnspan=3, pady=10, padx=10, sticky="ew")
 label_result.grid(row=4, column=0, columnspan=3, pady=5, padx=10, sticky="ew")
+
+root.bind("<Return>", calculate_route)
 
 root.mainloop()
