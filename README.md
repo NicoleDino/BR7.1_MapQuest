@@ -1,6 +1,6 @@
 # Breakout Room Activity 7.1 | Project Activity 3: Social Coding
-Members: 
-Nicole Rosae Diño
-Karla Danielle Jayme
-Marc Alvin Natividad
+Members: <br />
+Nicole Rosae Diño <br />
+Karla Danielle Jayme <br />
+Marc Alvin Natividad <br /> <br />
 Project: Feature Enhancements - MapQuest
